@@ -48,5 +48,11 @@ utl_sphinx_theme = "utl_sphinx_theme"
 packages = ["utl_sphinx_theme"]
 
 [tool.setuptools.package-data]
-"utl_sphinx_theme" = ["*.css", "*.html"]
+"utl_sphinx_theme" = [
+    "*.css",
+    "*.html",
+    "*.svg",
+    "*.conf",
+    "*.toml"
+]
 
