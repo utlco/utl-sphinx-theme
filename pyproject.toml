@@ -51,8 +51,11 @@ packages = ["utl_sphinx_theme"]
 "utl_sphinx_theme" = [
     "*.css",
     "*.html",
-    "*.svg",
     "*.conf",
-    "*.toml"
+    "*.toml",
+    "static/*.svg",
+    "static/*.css",
+    "static/*.html",
+    "static/*.js",
 ]
 
