@@ -18,7 +18,7 @@ _TEST_DOCS = _PROJ_DIR / 'docs'
 
 _TEXT = """
 <div class="pageheader">
-  <a href="#">
+  <a href="https://utlco.com">
     <img src="_static/logo.svg" alt="logo" />
   </a>
   <h1>{title}</h1>
