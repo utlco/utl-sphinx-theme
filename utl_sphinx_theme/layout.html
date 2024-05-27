@@ -10,7 +10,7 @@
 
 {% block header %}
 <div class="pageheader">
-  <a href="{{ pathto(root_doc)|e }}">
+  <a href="https://utlco.com">
     <img src="{{ pathto(theme_logo, resource=True) }}" alt="logo" />
   </a>
   <h1>{{ theme_title or html_short_title or docstitle }}</h1>
@@ -19,6 +19,7 @@
 
 {%- block relbar1 %}
 <div class="related" role="navigation" aria-label="related navigation">
+{% if theme_show_relbar %}
   <ul>
     <li><a href="{{ pathto(root_doc)|e }}">Home</a> &raquo;</li>
     {%- for parent in parents %}
@@ -29,6 +30,7 @@
     {%- endfor %}
     <li class="nav-item nav-item-this"><a href="{{ link|e }}">{{ title }}</a></li>
   </ul>
+{% endif %}
 </div>
 {% endblock %}
 
@@ -37,7 +39,8 @@
   <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
     {%- include "searchfield.html" %}
     <a href="{{ pathto(root_doc)|e }}">Home</a>
-    {{ toctree(maxdepth=2, titles_only=True) }}
+    {{ toctree(maxdepth=2, includehidden=True, titles_only=True) }}
+    <h4>Page Contents</h4>
     <div class="sphinxsidebar-navigation__contents">
       {{ toc }}
     </div>

@@ -30,6 +30,10 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
+test = [
+    "pytest",
+    "sphinx",
+]
 dev = [
     "pytest",
     "black",
@@ -51,8 +55,8 @@ packages = ["utl_sphinx_theme"]
 "utl_sphinx_theme" = [
     "*.css",
     "*.html",
-    "*.conf",
-    "*.toml",
+    "theme.conf",
+    "theme.toml",
     "static/*.svg",
     "static/*.css",
     "static/*.html",

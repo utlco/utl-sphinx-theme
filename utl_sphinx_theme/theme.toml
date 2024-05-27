@@ -7,3 +7,4 @@ sidebars = []
 [options]
 title = "Documentation"
 logo = "_static/logo.svg"
+show_relbar = false
