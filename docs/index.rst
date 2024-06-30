@@ -1,36 +1,26 @@
-Introduction
-============
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-* Github: https://github.com/utlco/utl-sphinx-theme
-
-This theme is a variation of **sphinx13** which is currently used by
-`Sphinx <https://www.sphinx-doc.org/en/master/index.html>`_ documentation.
-But more brown.
-
-This documentation uses utl_sphinx_theme.
+.. include:: ../README.rst
 
 
-How to use
-==========
 
-Install the theme from GitHub::
+Integration with GitHub actions
+===============================
 
-    pip install https://github.com/utlco/utl-sphinx-theme/archive/refs/heads/main.zip
+If there isn't one already,
+create a *requirements.txt* file in your docs directory
+(where your conf.py is)
+and add the following dependency line::
 
-Add the following line to your conf.py::
+    https://github.com/utlco/utl-sphinx-theme/archive/refs/heads/main.zip
 
-    html_theme = 'utl_sphinx_theme'
+This will install from the latest source. Alternatively, just
+add the package name byt itself, which will be installed from PyPI::
 
-To change the theme options (also in conf.py)::
+    utl_sphinx_theme
 
-    html_options = {
-        'title': 'MyTitle',
-        'logo': '_static/my-logo.svg',
-    }
 
-By default it will use the logo image **_static/logo.svg**.
+Example GitHub workflow
+-----------------------
 
+.. literalinclude:: ../.github/workflows/push_docs.yml 
+   :language: yaml
